@@ -64,6 +64,7 @@ public class Produto implements Comparable<Produto>{
 class ComparatorForPrice implements Comparator<Produto>{
     @Override
     public int compare(Produto o1, Produto o2) {
+
         return Double.compare(o1.getPrice(),o2.getPrice());
     }
 }
