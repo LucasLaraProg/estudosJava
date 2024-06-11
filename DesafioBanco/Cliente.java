@@ -1,2 +1,4 @@
-package edu.DesafioBanco;public class Cliente {
+package edu.DesafioBanco;
+
+public class Cliente {
 }

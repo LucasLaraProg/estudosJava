@@ -1,2 +1,4 @@
-package edu.DesafioBanco;public class Banco {
+package edu.DesafioBanco;
+
+public class Banco {
 }

@@ -1,2 +1,4 @@
-package edu.DesafioBanco;public class ContaPoupanca {
+package edu.DesafioBanco;
+
+public class ContaPoupanca extends Conta{
 }
