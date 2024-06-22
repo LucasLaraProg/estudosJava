@@ -34,6 +34,7 @@ public class EstoqueProdutos {
         if (!estoquesProdutosMap.isEmpty()) {
             for (Produto p : estoquesProdutosMap.values()) {
                 if (p.getPreco()>maiorPreco){
+                    maiorPreco=p.getPreco();
                     produtoMaisCaro=p;
                 }
             }
@@ -47,5 +48,12 @@ public class EstoqueProdutos {
     public static void main(String[] args) {
         EstoqueProdutos estoqueProdutos=new EstoqueProdutos();
         estoqueProdutos.exibirProdutos();
+        estoqueProdutos.adicionarProduto(123,"maca",10,2.5);
+        estoqueProdutos.adicionarProduto(124,"pera",5,5.0);
+        estoqueProdutos.adicionarProduto(12,"uva",9,2.0);
+        estoqueProdutos.adicionarProduto(1243,"morango",1,9.0);
+        estoqueProdutos.exibirProdutos();
+        System.out.println(estoqueProdutos.obterProdutoMaisCaro());
+        System.out.println(estoqueProdutos.calcularValorTotalEstoque());
     }
 }
