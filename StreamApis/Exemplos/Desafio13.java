@@ -1,4 +1,4 @@
-package edu.StreamApis;
+package edu.StreamApis.Exemplos;
 
 import java.util.Arrays;
 import java.util.List;

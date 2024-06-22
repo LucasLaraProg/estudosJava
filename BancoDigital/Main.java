@@ -20,7 +20,7 @@ public class Main {
         contaCc.transferir(400,contaPp);
         contaPp.imprimirExtrato();
         contaCc.imprimirExtrato();
-        //contaCc.imprimirLog();
+        contaCc.imprimirLog(lucas.getCpf());
 
     }
 

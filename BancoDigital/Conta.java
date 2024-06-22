@@ -1,26 +1,32 @@
 package edu.BancoDigital;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Conta implements iConta{
     protected static int AGENCIA_PADRAO=1923;
     protected int numero;
     protected int agencia;
     protected double saldo;
     protected Cliente cliente;
-    protected Log log;
+    protected List<Log>logs;
 
     private void gravarLog(int idconta,String operacao,double saldoAnterior,double saldoApos){
     Log log=new Log(idconta,operacao, saldoAnterior, saldoApos);
     System.out.println(log);
+//    logs.add(log);
+//    logs.stream().forEach(System.out::println);
 
     }
 
-    public void imprimirLog(){
-        System.out.println("----------Log da Conta----------");
-        System.out.println("Date:"+log.getDateLog());
-        System.out.println("Operação:"+ log.getOperacao());
-        System.out.println("Saldo anterior:"+log.getSaldoAnterior());
-        System.out.println("Saldo após:"+log.getSaldoApos());
-
+    public void imprimirLog(int idconta){
+        if (cliente.getCpf()==idconta) {
+            System.out.println("----------Log da Conta----------");
+            //System.out.println("Date:" + logs.size());
+//            System.out.println("Operação:" + log.getOperacao());
+//            System.out.println("Saldo anterior:" + log.getSaldoAnterior());
+//            System.out.println("Saldo após:" + log.getSaldoApos());
+        }
     }
     public int getNumero() {
         return numero;
@@ -54,8 +60,11 @@ public abstract class Conta implements iConta{
     @Override
     public void sacar(double valor) {
         this.gravarLog(this.cliente.getCpf(),"Saque",saldo,saldo -= valor);
-//        System.out.println("Log->");
-//        System.out.println(log);
+//        Log log=new Log(this.cliente.getCpf(),"saque", saldo, saldo -= valor);
+//        logs.add(log);
+//        logs.stream().forEach(System.out::println);
+////        System.out.println("Log->");
+////        System.out.println(log);
 
     }
 

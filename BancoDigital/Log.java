@@ -42,6 +42,7 @@ public class Log {
         this.saldoAnterior = saldoAnterior;
         this.saldoApos = saldoApos;
     }
+    public Log(){}
 
     public Date getDateLog() {
         return dateLog;
